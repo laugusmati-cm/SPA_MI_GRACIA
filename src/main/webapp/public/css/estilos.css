@@ -1,0 +1,165 @@
+:root{
+    --primary-color:#75566B; /* malva elegante - color pricipal*/
+    --primary-light:#D8B8C5; /* Rosa empolvado - botones y detalles */
+    --bg:#F5EDE8; /* Marfil càlido- fondo de la pagina */
+    --surface:#FFFFFF; /* blanco-Color de superficie para tarjetas y contenedores */
+    --text:#373238; /* Carbon suave - Color de texto principal */
+    --text-muted:#817681;  /*texto segundario */
+    --border:#E5D9DE; /* Bordes suaves */
+    --focus-ring:#EAD5DF; /* Color del anillo de enfoque para inputs */
+    --color-dorado:#b89a72;
+}
+/* Configuracion general*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Estilos generales */
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    /*Centrado absoluto horizontal y vertifical mediante flexbox*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:1rem;
+    background-image: url('../imag/school.jpg');
+    font-family: 'segoe UI',arial,sans-serif;
+}
+/* Tarjeta contenedora*/
+.login-card{
+    background:var(--surface);
+    width:100%;
+    max-width:430px;
+    padding: 2.5rem 2rem;
+    border-radius:0.75rem;
+    /* Sombra para dar profundidad */
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.25), 0 8px 10px -6px rgba(0,0,0,0.1);
+    position:relative;
+    z-index:10;
+}
+/* Encabezado de la tarjeta */
+.login-header{
+    text-align:center;
+    margin-bottom:2rem;
+}
+.login-header h1{
+    font-size:1.75rem;
+    color:var(--primary-color);
+    margin-bottom:0.5rem;
+}
+.login-header p{
+    color:var(--text-muted);
+    font-size:0.875rem;
+}
+/* Estilos del formulario */
+.form-group{
+    margin-bottom:1.25rem;
+    display:flex;
+    flex-direction:column;
+}
+.form-group label{
+    margin-bottom:0.875rem;
+    font-weight:600;
+    margin-left:0.35rem;
+    color:var(--text);
+}
+/* Estilos de los inputs tipo texto y contraseña */
+.form-control{
+    width:100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius:0.375rem;
+    font-size:0.95rem;
+    background-color:var(--bg);
+    /* Transición suave para el enfoque */
+    transition: boder-color 0.2s, box-shadows 0.2s, background-color 0.2s;
+}
+/* Efecto de enfoque para los inputs */
+.form-control:focus{
+    outline:none;
+    border-color:var(--primary-light);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+.form-actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:1.5rem;
+    font-size:0.875rem;
+
+}
+.remember-me{
+    display:flex;
+    align-items:center;
+    margin-bottom:1.5rem;
+    font-size:0.875rem;
+}
+/* Estilos del botón de inicio de sesión */
+.btn-submit{
+    width:100%;
+    padding: 0.75rem 1rem;
+    background-color:var(--primary-color);
+    color:white;
+    border:none;
+    border-radius:0.375rem;
+    font-size:1rem;
+    cursor:pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.btn-submit:hover{
+    background-color:var(--primary-light);
+    transform:translateY(-2px);
+}
+.error,
+.exito {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+            
+}
+
+.error {
+    color: #A13E3E;
+    background: #FCECEC;
+}
+
+.exito {
+    color: #426447;
+    background: #EAF3E9;
+}
+
+.link-login {
+    color:var(--primary-color);
+    text-decoration:none;
+    transition: color 0.2s;
+    border-top: 1px solid var(--border);
+    margin-top:1.5rem;
+}
+
+.link-login:hover {
+    color:var(--color-dorado);
+    text-decoration: underline;
+}
+.login-footer{
+    text-align:center;
+    font-size:0.875rem;
+    color:var(--text-muted);
+    margin-top:1.5rem;
+    border-top: 1px solid var(--border)
+}
+.login-footer a{
+    color:var(--primary-color);
+    text-decoration:none;
+    transition: color 0.2s;
+}
+.login-footer a:hover{
+    color:var(--color-dorado);
+    text-decoration: underline;
+}
