@@ -11,7 +11,7 @@ FROM tomcat:10.1-jdk17-temurin
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copiar el WAR generado (Libreria-1.0.war) a la raíz del servidor
-COPY --from=builder /app/target/Libreria-1.0.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=builder /app/target/Libreria-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
